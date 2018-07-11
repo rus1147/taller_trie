@@ -77,28 +77,16 @@ private:
 
     struct Nodo {
         ~Nodo();
-
         Nodo** siguientes;
         T* definicion;
-
-        Nodo() {
-            definicion=NULL;
-
-            siguientes = new Nodo*[256];
-            for(int i=0; i<256; i++){
-                siguientes[i]=NULL;
-            }
-        }
     };
 
+    bool sonHijosNulos(Nodo* nodoARevisar);
 
-    /*struct Dicc{
-        string clave;
-        T significado;
-    };*/
+    Nodo* copiarNodos(Nodo* nodoACopiar);
+
     Nodo* raiz;
     int _size;
-    T buscarSignificado(const string &key) const;
 };
 
 #include "string_map.hpp"

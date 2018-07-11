@@ -8,7 +8,7 @@ TEST(string_map_test, vacio) {
     EXPECT_TRUE(vacio.empty());
     EXPECT_EQ(vacio.count("hola"), 0);
 }
-/*
+
 TEST(string_map_test, asignar) {
     string_map<int> singleton;
     singleton["hola"] = 1;
@@ -16,7 +16,7 @@ TEST(string_map_test, asignar) {
     EXPECT_EQ(singleton["hola"], 1);
     EXPECT_EQ(singleton.size(), 1);
 }
-/*
+
 TEST(string_map_test, obtener) {
     string_map<int> sin_prefijos;
     string_map<int> con_prefijos;
@@ -217,7 +217,6 @@ TEST(string_map_test, erase) {
     sin_prefijos.erase("adios");
     EXPECT_FALSE(sin_prefijos.count("adios") == 1);
 }
-*/
 
 int main(int argc, char* argv[]) {
 	testing::InitGoogleTest(&argc, argv);
